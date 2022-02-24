@@ -117,6 +117,5 @@ for letter in final_String:
         break
 
 final_String = final_String + random.choice(password_characters)
-
 print("\nOur generated password for you is:\n")
 print(final_String)
