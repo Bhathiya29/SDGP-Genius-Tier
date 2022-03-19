@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
   bool agree = false;
   void _doSomething() {
     // Do something
-  }
+  }//test
 
   @override
   Widget build(BuildContext context) {
@@ -131,7 +131,7 @@ class _HomeState extends State<Home> {
                   ),
                   validator: (keyword1){
                     if(keyword1!.isEmpty ){
-                      return 'Please enter your keyword number 1';
+                      return 'Please enter your keyword number 2';
                     }else{
                       return null;
                     }
