@@ -126,7 +126,7 @@ class _savePageState extends State<savePage> {
                       width: 300,
                       height: 40,
                       child: TextField(
-                        controller: nameController,
+                        controller: userNameController,
                         decoration: const InputDecoration(
                           border: OutlineInputBorder(),
                           labelText: 'Email/UserName',
