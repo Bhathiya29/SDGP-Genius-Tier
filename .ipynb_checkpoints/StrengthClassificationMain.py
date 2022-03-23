@@ -1,0 +1,1 @@
+#The file Strength classification.py and strength classification.ipnb contains the trained model for the strength classifier
