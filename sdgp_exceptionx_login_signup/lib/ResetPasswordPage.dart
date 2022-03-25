@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:parse_server_sdk_flutter/parse_server_sdk.dart';
 
-import 'ResetPasswordForm.dart';
 import 'login.dart';
 
-class ResetPasswordPage extends StatelessWidget {
+class ResetPasswordPage extends StatefulWidget {
   const ResetPasswordPage({Key? key}) : super(key: key);
+
+  @override
+  _ResetPasswordPageState createState() => _ResetPasswordPageState();
+}
+
+class _ResetPasswordPageState extends State<ResetPasswordPage> {
+  final controllerEmail = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +90,22 @@ class ResetPasswordPage extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              const ResetPasswordForm(),
+              //const ResetPasswordForm(),
+              TextField(
+                controller: controllerEmail,
+                keyboardType: TextInputType.emailAddress,
+                textCapitalization: TextCapitalization.none,
+                autocorrect: false,
+                decoration: InputDecoration(
+                  labelText: 'E-mail',
+                  labelStyle: TextStyle(
+                    color: Colors.blueGrey[800],
+                  ),
+                  border: const UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                  ),
+                ),
+              ),
               const SizedBox(
                 height: 55,
               ),
@@ -92,12 +114,8 @@ class ResetPasswordPage extends StatelessWidget {
                 child: MaterialButton(
                   minWidth: double.infinity,
                   height: 60,
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const LoginPage()));
-                  },
+                  onPressed: () => doUserResetPassword(),
+
                   //defining the shape
                   color: const Color(0xEE9397DB),
                   shape: RoundedRectangleBorder(
@@ -122,4 +140,76 @@ class ResetPasswordPage extends StatelessWidget {
       ),
     );
   }
+
+  void doUserResetPassword() async {
+    final ParseUser user = ParseUser(null, null, controllerEmail.text.trim());
+    final ParseResponse parseResponse = await user.requestPasswordReset();
+
+    if (parseResponse.success) {
+      Message.showSuccess(
+          context: context,
+          message: 'Password reset instructions have been sent to email!',
+          onPressed: () {
+            Navigator.of(context).pop();
+          });
+    } else {
+      Message.showError(
+          context: context, message: parseResponse.error!.message);
+    }
+  }
 }
+
+class Message {
+  static void showSuccess(
+      {required BuildContext context,
+      required String message,
+      VoidCallback? onPressed}) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text("Success!"),
+          content: Text(message),
+          actions: <Widget>[
+            ElevatedButton(
+              child: const Text("OK"),
+              onPressed: () {
+                Navigator.of(context).pop();
+                if (onPressed != null) {
+                  onPressed();
+                }
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  static void showError(
+      {required BuildContext context,
+      required String message,
+      VoidCallback? onPressed}) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text("Error!"),
+          content: Text(message),
+          actions: <Widget>[
+            ElevatedButton(
+              child: const Text("OK"),
+              onPressed: () {
+                Navigator.of(context).pop();
+                if (onPressed != null) {
+                  onPressed();
+                }
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+}
+//chirath.reyna@gmail.com
