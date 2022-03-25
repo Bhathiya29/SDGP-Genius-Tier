@@ -274,6 +274,8 @@ class _SignUpPageState extends State<SignUpPage> {
 
     if (response.success) {
       showSuccess();
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => generationPage()));
     } else {
       showError(response.error!.message);
     }
