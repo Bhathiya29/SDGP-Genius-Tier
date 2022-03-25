@@ -277,6 +277,8 @@ class _LoginPageState extends State<LoginPage> {
       setState(() {
         isLoggedIn = true;
       });
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => generationPage()));
     } else {
       showError(response.error!.message);
     }
