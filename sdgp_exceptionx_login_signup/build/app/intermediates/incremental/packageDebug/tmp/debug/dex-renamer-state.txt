@@ -1,0 +1,4 @@
+#Fri Mar 25 16:56:08 IST 2022
+base.0=/Users/rashmiguruge/Desktop/sdgp_exceptionx_login_signup/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

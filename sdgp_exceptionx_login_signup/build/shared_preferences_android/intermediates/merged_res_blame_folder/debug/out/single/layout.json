@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/rashmiguruge/Desktop/sdgp_exceptionx_login_signup/build/shared_preferences_android/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",
+        "source": "/Users/rashmiguruge/.gradle/caches/transforms-2/files-2.1/67ff0aaf930f65024e6c37d99bc9e852/core-1.6.0/res/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/rashmiguruge/Desktop/sdgp_exceptionx_login_signup/build/shared_preferences_android/intermediates/res/merged/debug/layout/custom_dialog.xml",
+        "source": "/Users/rashmiguruge/.gradle/caches/transforms-2/files-2.1/67ff0aaf930f65024e6c37d99bc9e852/core-1.6.0/res/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "/Users/rashmiguruge/Desktop/sdgp_exceptionx_login_signup/build/shared_preferences_android/intermediates/res/merged/debug/layout/notification_action.xml",
+        "source": "/Users/rashmiguruge/.gradle/caches/transforms-2/files-2.1/67ff0aaf930f65024e6c37d99bc9e852/core-1.6.0/res/layout/notification_action.xml"
+    },
+    {
+        "merged": "/Users/rashmiguruge/Desktop/sdgp_exceptionx_login_signup/build/shared_preferences_android/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/rashmiguruge/.gradle/caches/transforms-2/files-2.1/67ff0aaf930f65024e6c37d99bc9e852/core-1.6.0/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/rashmiguruge/Desktop/sdgp_exceptionx_login_signup/build/shared_preferences_android/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/rashmiguruge/.gradle/caches/transforms-2/files-2.1/67ff0aaf930f65024e6c37d99bc9e852/core-1.6.0/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/rashmiguruge/Desktop/sdgp_exceptionx_login_signup/build/shared_preferences_android/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
+        "source": "/Users/rashmiguruge/.gradle/caches/transforms-2/files-2.1/67ff0aaf930f65024e6c37d99bc9e852/core-1.6.0/res/layout/notification_template_icon_group.xml"
+    }
+]

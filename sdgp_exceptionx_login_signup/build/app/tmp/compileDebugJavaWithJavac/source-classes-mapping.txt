@@ -1,0 +1,6 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/example/genius_tier/BuildConfig.java
+ com.example.genius_tier.BuildConfig
+com/example/genius_tier/MainActivity.java
+ com.example.genius_tier.MainActivity
