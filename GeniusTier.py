@@ -52,17 +52,7 @@ final_password_split = algo_shuffle(final_password_split, special_character)
 if len(final_password_split) > 12:
     char_to_remove = len(final_password_split) - 12
     final_password_split = final_password_split[:-char_to_remove]
-"""
-if len(final_password_split) <12:
-    char_to_add = 12-len(final_password_split)
-    charAdd =[]
-    for i in range(char_to_add):
-        charAdd.append(random.choice(string.ascii_letters+string.digits))
-    final_password_split = [iter(final_password_split)] * len(final_password_split) + [iter(charAdd)] * len(
-        charAdd)
-    random.shuffle(final_password_split)
-    final_password_split = [next(i) for i in final_password_split]
-"""
+
 # final password input
 final_password = "".join(final_password_split)
 
